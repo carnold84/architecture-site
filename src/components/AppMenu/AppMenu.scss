@@ -1,0 +1,51 @@
+:host {
+  --transitionDuration: 300ms;
+
+  background-color: #ffffff;
+  display: flex;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate(calc(100% - 60px));
+  transition: transform var(--transitionDuration) ease-out;
+  width: 400px;
+  z-index: 3;
+}
+
+:host(.is_open) {
+  transform: translateX(0);
+
+  .toggle_btn {
+    transform: rotate(180deg);
+  }
+}
+
+.toggle_btn {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text3);
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  transform-origin: center;
+  transition: transform var(--transitionDuration) ease;
+  width: 100%;
+}
+
+.header {
+  align-items: flex-start;
+  border-left: 1px solid var(--neutral1);
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+  width: 60px;
+}
+
+.content {
+  flex-grow: 1;
+}

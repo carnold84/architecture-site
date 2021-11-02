@@ -1,0 +1,22 @@
+:root {
+  --fontFamily: 'Work Sans', Avenir, Helvetica, Arial, sans-serif;
+  --neutral0: #ffffff;
+  --neutral1: #eeeeee;
+  --neutral2: #dddddd;
+  --neutral3: #cccccc;
+  --text1: #333333;
+  --text2: #555555;
+  --text3: #777777;
+  --text4: #999999;
+}
+
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+}

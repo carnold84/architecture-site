@@ -1,0 +1,67 @@
+:host {
+  position: absolute;
+  // required for transitionend event to fire
+  transition: all 1000ms ease-in-out;
+  width: 100%;
+}
+
+.text {
+  margin: 40px 0 0 40px;
+  position: absolute;
+  z-index: 1;
+}
+
+.title {
+  color: #ffffff;
+  font-family: var(--fontFamily);
+  font-size: 4rem;
+  font-weight: 200;
+  margin: 0 0 5px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+  transition-delay: 1200ms;
+}
+
+.sub_title {
+  color: #d4eaff;
+  font-family: var(--fontFamily);
+  font-size: 2.4rem;
+  font-weight: 200;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+  transition-delay: 1600ms;
+}
+
+.hero_image {
+  background-color: #eeeeee;
+  height: 100vh;
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+  width: 100%;
+  z-index: 0;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+:host(.show) {
+  .hero_image {
+    opacity: 1;
+  }
+
+  .title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .sub_title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
